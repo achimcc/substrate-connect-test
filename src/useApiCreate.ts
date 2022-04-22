@@ -1,41 +1,42 @@
-import { useEffect, useState, useRef, MutableRefObject } from "react"
-import { ApiPromise } from "@polkadot/api"
+import { useEffect, useState, useRef, MutableRefObject } from "react";
+import { ApiPromise } from "@polkadot/api";
 import {
   ScProvider,
   WellKnownChain,
-} from "@polkadot/rpc-provider/substrate-connect"
+} from "@polkadot/rpc-provider/substrate-connect";
+import canvasSpec from "./canvas-rococo.json";
 
-export type MountedRef = MutableRefObject<boolean>
+export type MountedRef = MutableRefObject<boolean>;
 export const useIsMountedRef = (): MountedRef => {
-  const isMounted = useRef(false)
+  const isMounted = useRef(false);
   useEffect((): (() => void) => {
-    isMounted.current = true
+    isMounted.current = true;
     return (): void => {
-      isMounted.current = false
-    }
-  }, [])
+      isMounted.current = false;
+    };
+  }, []);
 
-  return isMounted
-}
+  return isMounted;
+};
 
 export const useApiCreate = (): ApiPromise => {
-  const [api, setApi] = useState<ApiPromise>({} as ApiPromise)
-  const mountedRef = useIsMountedRef()
+  const [api, setApi] = useState<ApiPromise>({} as ApiPromise);
+  const mountedRef = useIsMountedRef();
 
   useEffect((): void => {
     const choseSmoldot = async (): Promise<void> => {
       try {
-        const provider = new ScProvider(WellKnownChain.westend2)
-        await provider.connect()
-        const api = await ApiPromise.create({ provider })
-        mountedRef.current && setApi(api)
+        const provider = new ScProvider(JSON.stringify(canvasSpec));
+        await provider.connect();
+        const api = await ApiPromise.create({ provider });
+        mountedRef.current && setApi(api);
       } catch (err) {
-        console.error("Error:", err)
+        console.error("Error:", err);
       }
-    }
+    };
 
-    void choseSmoldot()
-  }, [mountedRef])
+    void choseSmoldot();
+  }, [mountedRef]);
 
-  return api
-}
+  return api;
+};
