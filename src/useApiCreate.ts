@@ -26,7 +26,11 @@ export const useApiCreate = (): ApiPromise => {
   useEffect((): void => {
     const choseSmoldot = async (): Promise<void> => {
       try {
-        const provider = new ScProvider(JSON.stringify(canvasSpec));
+        const westendProvider = new ScProvider(WellKnownChain.rococo_v2_1);
+        const provider = new ScProvider(
+          JSON.stringify(canvasSpec),
+          westendProvider
+        );
         await provider.connect();
         const api = await ApiPromise.create({ provider });
         mountedRef.current && setApi(api);
