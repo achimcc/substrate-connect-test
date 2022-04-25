@@ -7,10 +7,14 @@
     "/ip4/35.204.68.28/tcp/30333/p2p/12D3KooWPEXYrz8tHU3nDtPoPw4V7ou5dzMEWSTuUj7vaWiYVAVh",
     "/ip4/34.90.139.15/tcp/30333/p2p/12D3KooWEVU8AFNary4nP4qEnEcwJaRuy59Wefekzdu9pKbnVEhk",
     "/ip4/35.204.99.97/tcp/30333/p2p/12D3KooWP6pV3ZmcXzGDjv8ZMgA6nZxfAKDxSz4VNiLx6vVCQgJX",
-    "/ip4/34.90.191.237/tcp/30334/ws/p2p/12D3KooWKg3Rpxcr9oJ8n6khoxpGKWztCZydtUZk2cojHqnfLrpj",
-    "/ip4/35.204.68.28/tcp/30334/ws/p2p/12D3KooWPEXYrz8tHU3nDtPoPw4V7ou5dzMEWSTuUj7vaWiYVAVh",
-    "/ip4/34.90.139.15/tcp/30334/ws/p2p/12D3KooWEVU8AFNary4nP4qEnEcwJaRuy59Wefekzdu9pKbnVEhk",
-    "/ip4/35.204.99.97/tcp/30334/ws/p2p/12D3KooWP6pV3ZmcXzGDjv8ZMgA6nZxfAKDxSz4VNiLx6vVCQgJX"
+    "/dns/canvas-collator-0.parity-testnet.parity.io/tcp/443/wss/p2p/12D3KooWKg3Rpxcr9oJ8n6khoxpGKWztCZydtUZk2cojHqnfLrpj",
+    "/dns/canvas-collator-1.parity-testnet.parity.io/tcp/443/wss/p2p/12D3KooWPEXYrz8tHU3nDtPoPw4V7ou5dzMEWSTuUj7vaWiYVAVh",
+    "/dns/canvas-collator-2.parity-testnet.parity.io/tcp/443/wss/p2p/12D3KooWEVU8AFNary4nP4qEnEcwJaRuy59Wefekzdu9pKbnVEhk",
+    "/dns/canvas-collator-3.parity-testnet.parity.io/tcp/443/wss/p2p/12D3KooWP6pV3ZmcXzGDjv8ZMgA6nZxfAKDxSz4VNiLx6vVCQgJX",
+    "/dns/canvas-collator-0.parity-testnet.parity.io/tcp/30333/ws/p2p/12D3KooWKg3Rpxcr9oJ8n6khoxpGKWztCZydtUZk2cojHqnfLrpj",
+    "/dns/canvas-collator-1.parity-testnet.parity.io/tcp/30333/ws/p2p/12D3KooWPEXYrz8tHU3nDtPoPw4V7ou5dzMEWSTuUj7vaWiYVAVh",
+    "/dns/canvas-collator-2.parity-testnet.parity.io/tcp/30333/ws/p2p/12D3KooWEVU8AFNary4nP4qEnEcwJaRuy59Wefekzdu9pKbnVEhk",
+    "/dns/canvas-collator-3.parity-testnet.parity.io/tcp/30333/ws/p2p/12D3KooWP6pV3ZmcXzGDjv8ZMgA6nZxfAKDxSz4VNiLx6vVCQgJX"
   ],
   "telemetryEndpoints": null,
   "protocolId": null,
@@ -18,7 +22,7 @@
     "tokenDecimals": 12,
     "tokenSymbol": "ROC"
   },
-  "relay_chain": "rococo",
+  "relay_chain": "rococo_v2_1",
   "para_id": 1002,
   "consensusEngine": null,
   "codeSubstitutes": {},
