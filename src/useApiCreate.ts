@@ -32,7 +32,9 @@ export const useApiCreate = (): ApiPromise => {
           rococoProvider
         );
         await provider.connect();
+        console.log('provider',provider)
         const api = await ApiPromise.create({ provider });
+        console.log('api', api)
         mountedRef.current && setApi(api);
       } catch (err) {
         console.error("Error:", err);
